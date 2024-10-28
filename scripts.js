@@ -19,9 +19,11 @@ function followUser(username) {
     })
     .then(response => response.json())
     .then(data => {
+        // ফলো সফল হলে সাকসেস মেসেজ দেখানো
         if (!data.error) {
-            alert('Successfully followed user: ' + username);
+            alert(`Successfully followed ${username}! 🎉`);
         } else {
+            // ফলো ব্যর্থ হলে এরর মেসেজ দেখানো
             alert('Failed to follow user: ' + data.error.message);
         }
     })
